@@ -60,7 +60,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user)
+          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -74,12 +74,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src={BG_IMAGE
-            
-          }
-          alt="logo"
-        />
+        <img src={BG_IMAGE} alt="logo" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}

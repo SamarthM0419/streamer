@@ -31,4 +31,5 @@
  - Found out tmdb image cdn url
  - Made browse page look better
  - usePopularMovies , useTopRatedMovies , useUpcomingMovies custom hook
+ - GPT search feature
 

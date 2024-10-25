@@ -7,6 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
 import { LOGO, USER_AVATAR } from "../utils/constants";
+import { toggleGptSearchView } from "../utils/gptSlice";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -43,19 +44,27 @@ const Header = () => {
     };
   }, []);
 
+  const handleGptSearchClick = () => {
+    dispatch(toggleGptSearchView());
+  };
+
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
       <img className="w-44" src={LOGO} alt="logo" />
-      {user &&
-       ( //display it only if subscribed to store , don't display on main page
+      {user && ( //display it only if subscribed to store , don't display on main page
         <div className="flex p-2">
-          <img
-            className="w-14 h-14"
-            alt="userIcon"
-            src={USER_AVATAR}
-          />
+          <button
+            className="py-2 px-4 m-2 bg-purple-800 text-white rounded-lg "
+            onClick={handleGptSearchClick}
+          >
+            Search
+          </button>
+          <img className="w-14 h-14" alt="userIcon" src={USER_AVATAR} />
 
-          <button className="font-bold text-white p-2" onClick={handleSignOut}>
+          <button
+            className="font-bold text-white p-2 cursor-pointer rounded-lg"
+            onClick={handleSignOut}
+          >
             Sign Out
           </button>
         </div>
