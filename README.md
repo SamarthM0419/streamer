@@ -32,4 +32,10 @@
  - Made browse page look better
  - usePopularMovies , useTopRatedMovies , useUpcomingMovies custom hook
  - GPT search feature
+ - GPT search page
+ - GPT search bar
+
+ - Multi-language feature in our app
+
+ - Integrate GPT API's , get openAI key
 

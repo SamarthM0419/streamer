@@ -11,8 +11,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNTA2YThjZjI1ZWM5MGQzOTI3YzE0NjA1NDM0MDVmNSIsIm5iZiI6MTcyOTY1MzA3NC4zNDQzODksInN1YiI6IjY3MTg2ODZhYTRhYzhhNDMyYzViYzM3OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cQ81Jb2sI8T92wZcXQXFENn3G4SdbTkbGSNsX_PclWs",
+    Authorization: "Bearer" + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -23,3 +22,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+export const OPEN_AI_GPT_KEY = " sk-Rb87yxoE9zTN-0BQ3YjC0mJjUGQpqelknNbl8tSZdMT3BlbkFJArBoOU1Xyc02W8zkBjMUfXFAGl_xfjWmsqJE_3mJwA"
